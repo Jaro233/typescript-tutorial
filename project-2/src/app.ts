@@ -2,7 +2,10 @@ import axios from "axios";
 const form = document.querySelector("form")!;
 const addressInput = document.getElementById("address")! as HTMLInputElement;
 
-const google_api_key = "AIzaSyAjyODC5o5V9ub_rtfFR-BiwWWvBmEQ_bU";
+import * as dotenv from "dotenv";
+dotenv.config();
+
+const google_api_key = process.env.GOOGLE_API_KEY;
 
 type MapCoordinates = {lat: number; lng: number};
 
